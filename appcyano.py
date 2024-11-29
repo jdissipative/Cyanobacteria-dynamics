@@ -3,7 +3,9 @@
 
 # In[3]:
 
-
+!pip install matplotlib
+!pip install seaborn
+!pip install streamlit
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
