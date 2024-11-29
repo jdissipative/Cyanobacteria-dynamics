@@ -57,7 +57,7 @@ def run_adsimulation(t, C0, P0, args):
 # Streamlit UI
 st.set_page_config(layout="wide", page_title="C-P Dynamics Simulation")
 st.title("Cyanobacteria-Phosphorus Dynamics")
-st.latex(r"\frac{dC}{dt}=CP-C+h\frac{C{^2}}{P}")
+st.latex(r"\frac{dC}{dt}=CP-C-h\frac{C{^2}}{P}")
 st.latex(r"\frac{dP}{dt}=I-CP-lP")
 col1, spacer, col2 = st.columns([1, 0.2, 2])
 with col1:
