@@ -88,13 +88,13 @@ with col2:
     ax2_lines = [plt.Line2D([0], [0], color="r", lw=2, label="P")]
     ax1.legend(handles=ax1_lines + ax2_lines, loc="upper right", title="Legend")
     ax1.grid(True)
-    ax1.tittle("Cyanobacteria-Phosphorus dynamics")
+    ax1.set_title("Cyanobacteria-Phosphorus dynamics")
     st.pyplot(fig)
     
     fig2, ax3 = plt.subplots()
     ax3.plot(P, C)
     ax3.set_xlabel("P")
     ax3.set_ylabel("C")
-    ax3.tittle("Phase portrait")
+    ax3.set_title("Phase portrait")
     st.pyplot(fig2)
 
