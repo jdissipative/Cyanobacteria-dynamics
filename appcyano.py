@@ -91,7 +91,7 @@ with col2:
     ax1.set_title("Cyanobacteria-Phosphorus dynamics")
     st.pyplot(fig)
     
-    fig2, ax3 = plt.subplots()
+    fig2, ax3 = plt.subplots(figsize=(10, 6))
     ax3.plot(P, C)
     ax3.set_xlabel("P")
     ax3.set_ylabel("C")
