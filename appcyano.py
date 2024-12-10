@@ -61,9 +61,9 @@ st.latex(r"\frac{dC}{dt}=CP-C-h\frac{C{^2}}{P}")
 st.latex(r"\frac{dP}{dt}=I-CP-lP")
 col1, spacer, col2 = st.columns([1, 0.2, 2])
 with col1:
-    H = st.slider(r"$h$", 0.001, 10.0, 0.11, 0.001, format="%.5f")
-    I = st.slider(r"$I$", 0.001, 1.0, 0.014, 0.001, format="%.5f")
-    L = st.slider(r"$l$", 0.001, 1.0, 0.005, 0.001, format="%.5f")
+    H = st.slider(r"$h$", 0.00, 10.0, 0.11, 0.001, format="%.5f")
+    I = st.slider(r"$I$", 0.00, 1.0, 0.014, 0.001, format="%.5f")
+    L = st.slider(r"$l$", 0.00, 1.0, 0.005, 0.001, format="%.5f")
     C0 = st.number_input("Initial Cyanobacteria concentration (g/L)", min_value=0.00001,value=0.05,step=0.00001,format="%.5f")/(b/e)
     
     P0 = st.number_input("Initial Phosphorus concentration (mg/L)",min_value=0.00001,value=0.005,step=0.00001,format="%.5f")/(b/a)
