@@ -61,7 +61,7 @@ st.latex(r"\frac{dC}{dt}=CP-C-h\frac{C{^2}}{P}")
 st.latex(r"\frac{dP}{dt}=I-CP-lP")
 col1, spacer, col2 = st.columns([1, 0.2, 2])
 with col1:
-    t = st.slider(r"$t$", 0.00, 1000, 360, 1)
+    t = st.slider(r"$t$", 0, 1000, 360, 1)
     H = st.slider(r"$h$", 0.00, 10.0, 0.11, 0.001, format="%.5f")
     I = st.slider(r"$I$", 0.00, 1.0, 0.014, 0.001, format="%.5f")
     L = st.slider(r"$l$", 0.00, 1.0, 0.005, 0.001, format="%.5f")
