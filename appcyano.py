@@ -19,14 +19,14 @@ h = 0.005*b
 dx = h
 
 # Define the differential equations
-def dCad(t, C, P, H, I, L):
-    return (C * P - C - H * C * C / P)
+def dCad(t,C,P,H,I,L):
+    return (C*P-C-H*C*C/P)
 
-def dPad(t, C, P, H, I, L):
-    return (I - C * P - L * P)
+def dPad(t,C,P,H,I,L):
+    return (I-C*P-L*P)
 
 def run_adsimulation(t, C0, P0, args):
-    H, I, L = args
+    H,I,L = args
     C = np.zeros(len(t))
     P = np.zeros(len(t))
     C[0] = C0
@@ -75,25 +75,25 @@ tad = np.arange(0,t*b+h*b, h*b)
 Cad, Pad = run_adsimulation(tad, C0, P0, (H, I, L))
 C=Cad*(b/e)
 P=Pad*(b/a)
-t = tad/b
+t=tad/b
 # Plot results
 with col2:
-    fig, ax1 = plt.subplots(figsize=(10, 6))
-    ax2 = ax1.twinx()
+    fig, ax1=plt.subplots(figsize=(10, 6))
+    ax2=ax1.twinx()
     sns.lineplot(x=t, y=C, ax=ax1, color="g", label=None)
     sns.lineplot(x=t, y=P, ax=ax2, color="r", label=None)
     ax1.set_xlabel("Time (d)", fontsize=12)
     ax1.set_ylabel("Cyanobacteria concentration (g/L)", color="g", fontsize=12)
     ax2.set_ylabel("Phoshorus concentration (mg/L)", color="r", fontsize=12)
-    ax1_lines = [plt.Line2D([0], [0], color="g", lw=2, label="C")]
-    ax2_lines = [plt.Line2D([0], [0], color="r", lw=2, label="P")]
+    ax1_lines=[plt.Line2D([0], [0], color="g", lw=2, label="C")]
+    ax2_lines=[plt.Line2D([0], [0], color="r", lw=2, label="P")]
     ax1.legend(handles=ax1_lines + ax2_lines, loc="upper right", title="Legend")
     ax1.grid(True)
     ax1.set_title("Cyanobacteria-Phosphorus dynamics")
     st.pyplot(fig)
     
     fig2, ax3 = plt.subplots(figsize=(10, 6))
-    ax3.plot(P, C)
+    ax3.plot(P,C)
     ax3.set_xlabel("P")
     ax3.set_ylabel("C")
     ax3.set_title("Phase portrait")
